@@ -5,7 +5,7 @@
 ## The Assignment
 The requested task is to implement an algorithm to generate summarization of an input text following the style of another text given as input, using a Large Language Model (LLM).
 
-The implementation uses a BART LLM model (_sshleifer/distilbart-cnn-12-6_) for the summarization tasks.
+The implementation uses a BART LLM model (_sshleifer/distilbart-cnn-12-6_) for the summarization tasks (~2GB).
 
 The documents are taken as input using the files inside the _\inputs_ folder, then their lengths are measured (in number of tokens) and are calculated the target lengths in order to check if the documents can fit in the context window of the LLM.
 
