@@ -28,7 +28,6 @@ def compute_target_lengths(length_doc1, length_doc2, context_window):
 def slice_document(document, target_length):
     tokens = nltk.word_tokenize(document)
     return " ".join(tokens[:target_length])
-    #return document[:target_length]
 
 
 # Function to summarize a slice of the document
@@ -41,7 +40,7 @@ def summarize_slice(slice_document):
     input_text = slice_document
 
     # Generate the summary
-    summary = summarizer(input_text, max_length=1024, min_length=1, do_sample=False)
+    summary = summarizer(input_text, max_length=1024, min_length=1, do_sample=False) # max_length is the model max_length 
 
     formatted_summary = "\n".join(textwrap.wrap(summary[0]['summary_text'], width=80))
 
@@ -53,6 +52,7 @@ def collate_summaries(summaries):
     return " ".join(summaries)
 
 
+# Function to summarize a document
 def summarize_doc(doc):
     summaries = []
 
