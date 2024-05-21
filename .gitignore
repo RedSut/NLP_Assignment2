@@ -152,4 +152,4 @@ cython_debug/
 #.idea/
 
 # Other useless files
-prova.py
+prove/
